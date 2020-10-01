@@ -6,9 +6,6 @@ set( CMAKE_CXX_STANDARD 17 )
 
 set(CMAKE_CXX_FLAGS "-O3 --std=c++17")
 
-FIND_PACKAGE( Boost 1.72.0 COMPONENTS msm REQUIRED )
-INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
-
 
 add_executable( arlington_transit 
    src/ArlingtonTransit.cpp 

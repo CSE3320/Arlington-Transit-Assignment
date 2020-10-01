@@ -11,14 +11,16 @@
 enum class StationName
 {
   UTA = 0,
-  Prince = 1
+  Prince = 1,
+  Pioneer = 2
 };
 
 
 static std::map < StationName, std::string > StationToString = 
 {
-  { StationName::UTA,    "UTA"    },
-  { StationName::Prince, "Prince" }
+  { StationName::UTA,     "UTA"     },
+  { StationName::Prince,  "Prince"  },
+  { StationName::Pioneer, "Pioneer" }
 };
 
 std::ostream & operator << ( std::ostream & output, const StationName & station );

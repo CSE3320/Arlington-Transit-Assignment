@@ -7,6 +7,7 @@ int main()
 {
   Station Uta(StationName::UTA);
   Station Prince(StationName::Prince);
+  Station Pioneer(StationName::Pioneer);
 
   std::vector< Edge > UTA_Line;
 
@@ -17,7 +18,16 @@ int main()
 
   UTA_Line . push_back( UTA2Prince );
 
-  TransitLine UTA( UTA_Line, 2 );
+  struct Edge UTA2Pioneer;
+  UTA2Pioneer . src  = StationName::UTA;
+  UTA2Pioneer . dest = StationName::Pioneer;
+  UTA2Pioneer . distance = 2;
+
+  UTA_Line . push_back( UTA2Pioneer );
+
+  // The seocnd parameter is the number of stations on the line.
+  // This should be able to be eliminated.
+  TransitLine UTA( UTA_Line, 3 );
 
   std::cout << UTA << std::endl;
 

@@ -2,6 +2,7 @@
 
 TransitLine::TransitLine( std::vector<Edge> const &edges, int N )
 {
+  //\TODO Remove the need for the resize.
   adjList.resize( N );
 
   for( auto & edge : edges )
