@@ -3,6 +3,8 @@
 
 #include "TransitLine.h"
 
+#define NUM_STATIONS 3
+
 int main()
 {
   Station Uta(StationName::UTA);
@@ -25,9 +27,7 @@ int main()
 
   UTA_Line . push_back( UTA2Pioneer );
 
-  // The seocnd parameter is the number of stations on the line.
-  // This should be able to be eliminated.
-  TransitLine UTA( UTA_Line, 3 );
+  TransitLine UTA( UTA_Line, NUM_STATIONS );
 
   std::cout << UTA << std::endl;
 

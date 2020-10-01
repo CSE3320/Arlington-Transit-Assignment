@@ -1,9 +1,8 @@
 #include "TransitLine.h"
 
-TransitLine::TransitLine( std::vector<Edge> const &edges, int N )
+TransitLine::TransitLine( std::vector<Edge> const &edges, int num_stations )
 {
-  //\TODO Remove the need for the resize.
-  adjList.resize( N );
+  adjList.resize( num_stations );
 
   for( auto & edge : edges )
   {
