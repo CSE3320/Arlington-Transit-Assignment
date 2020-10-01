@@ -22,7 +22,7 @@ class TransitLine
     
     std::vector<std::vector<Pair>> adjList;
 
-    TransitLine( std::vector<Edge> const & edges, int N );
+    TransitLine( std::vector<Edge> const & edges, int num_stations );
 
     friend std::ostream & operator << ( std::ostream & output, const TransitLine & transitline );
 
